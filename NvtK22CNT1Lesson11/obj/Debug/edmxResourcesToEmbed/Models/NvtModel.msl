@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NvtLesson11DbsModelStoreContainer" CdmEntityContainer="NvtLesson11DbsEntities">
+    <EntitySetMapping Name="NvtTaiKhoans">
+      <EntityTypeMapping TypeName="NvtLesson11DbsModel.NvtTaiKhoan">
+        <MappingFragment StoreEntitySet="NvtTaiKhoan">
+          <ScalarProperty Name="NvtId" ColumnName="NvtId" />
+          <ScalarProperty Name="NvtUserName" ColumnName="NvtUserName" />
+          <ScalarProperty Name="NvtPassword" ColumnName="NvtPassword" />
+          <ScalarProperty Name="NvtFullName" ColumnName="NvtFullName" />
+          <ScalarProperty Name="NvtAge" ColumnName="NvtAge" />
+          <ScalarProperty Name="NvtEmail" ColumnName="NvtEmail" />
+          <ScalarProperty Name="NvtPhone" ColumnName="NvtPhone" />
+          <ScalarProperty Name="NvtStatus" ColumnName="NvtStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

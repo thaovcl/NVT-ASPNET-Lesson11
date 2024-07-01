@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NvtLesson11DbsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NvtLesson11Dbs.dbo.NvtTaiKhoan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="NvtTaiKhoan">
+          <Key>
+            <PropertyRef Name="NvtId" />
+          </Key>
+          <Property Name="NvtId" Type="int" Nullable="false" />
+          <Property Name="NvtUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NvtPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="NvtFullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NvtAge" Type="int" />
+          <Property Name="NvtEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="NvtPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="NvtStatus" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="NvtLesson11DbsModelStoreContainer">
+          <EntitySet Name="NvtTaiKhoan" EntityType="Self.NvtTaiKhoan" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [NvtTaiKhoan].[NvtId] AS [NvtId], 
+    [NvtTaiKhoan].[NvtUserName] AS [NvtUserName], 
+    [NvtTaiKhoan].[NvtPassword] AS [NvtPassword], 
+    [NvtTaiKhoan].[NvtFullName] AS [NvtFullName], 
+    [NvtTaiKhoan].[NvtAge] AS [NvtAge], 
+    [NvtTaiKhoan].[NvtEmail] AS [NvtEmail], 
+    [NvtTaiKhoan].[NvtPhone] AS [NvtPhone], 
+    [NvtTaiKhoan].[NvtStatus] AS [NvtStatus]
+    FROM [dbo].[NvtTaiKhoan] AS [NvtTaiKhoan]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NvtLesson11DbsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NvtTaiKhoan">
+          <Key>
+            <PropertyRef Name="NvtId" />
+          </Key>
+          <Property Name="NvtId" Type="Int32" Nullable="false" />
+          <Property Name="NvtUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NvtPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NvtFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NvtAge" Type="Int32" />
+          <Property Name="NvtEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NvtPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NvtStatus" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="NvtLesson11DbsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NvtTaiKhoans" EntityType="Self.NvtTaiKhoan" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NvtLesson11DbsModelStoreContainer" CdmEntityContainer="NvtLesson11DbsEntities">
+          <EntitySetMapping Name="NvtTaiKhoans">
+            <EntityTypeMapping TypeName="NvtLesson11DbsModel.NvtTaiKhoan">
+              <MappingFragment StoreEntitySet="NvtTaiKhoan">
+                <ScalarProperty Name="NvtId" ColumnName="NvtId" />
+                <ScalarProperty Name="NvtUserName" ColumnName="NvtUserName" />
+                <ScalarProperty Name="NvtPassword" ColumnName="NvtPassword" />
+                <ScalarProperty Name="NvtFullName" ColumnName="NvtFullName" />
+                <ScalarProperty Name="NvtAge" ColumnName="NvtAge" />
+                <ScalarProperty Name="NvtEmail" ColumnName="NvtEmail" />
+                <ScalarProperty Name="NvtPhone" ColumnName="NvtPhone" />
+                <ScalarProperty Name="NvtStatus" ColumnName="NvtStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

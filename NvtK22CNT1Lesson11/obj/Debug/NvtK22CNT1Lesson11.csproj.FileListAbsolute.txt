@@ -1,0 +1,4 @@
+D:\ASPNET\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\obj\Debug\NvtK22CNT1Lesson11.csproj.AssemblyReference.cache
+D:\ASPNET\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\obj\Debug\NvtK22CNT1Lesson11.csproj.CoreCompileInputs.cache
+D:\ASPNET\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\obj\Debug\TvcK22CNT1Lesson11.dll
+D:\ASPNET\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\NvtK22CNT1Lesson11\obj\Debug\TvcK22CNT1Lesson11.pdb

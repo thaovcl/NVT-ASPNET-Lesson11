@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NvtLesson11DbsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NvtLesson11Dbs.dbo.NvtTaiKhoan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NvtTaiKhoan">
+    <Key>
+      <PropertyRef Name="NvtId" />
+    </Key>
+    <Property Name="NvtId" Type="int" Nullable="false" />
+    <Property Name="NvtUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvtPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvtFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvtAge" Type="int" />
+    <Property Name="NvtEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvtPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvtStatus" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="NvtLesson11DbsModelStoreContainer">
+    <EntitySet Name="NvtTaiKhoan" EntityType="Self.NvtTaiKhoan" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NvtTaiKhoan].[NvtId] AS [NvtId], 
+    [NvtTaiKhoan].[NvtUserName] AS [NvtUserName], 
+    [NvtTaiKhoan].[NvtPassword] AS [NvtPassword], 
+    [NvtTaiKhoan].[NvtFullName] AS [NvtFullName], 
+    [NvtTaiKhoan].[NvtAge] AS [NvtAge], 
+    [NvtTaiKhoan].[NvtEmail] AS [NvtEmail], 
+    [NvtTaiKhoan].[NvtPhone] AS [NvtPhone], 
+    [NvtTaiKhoan].[NvtStatus] AS [NvtStatus]
+    FROM [dbo].[NvtTaiKhoan] AS [NvtTaiKhoan]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

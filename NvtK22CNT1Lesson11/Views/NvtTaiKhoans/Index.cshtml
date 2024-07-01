@@ -1,0 +1,70 @@
+﻿@model IEnumerable<NvtK22CNT1Lesson11.Models.NvtTaiKhoan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NvtLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NvtId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NvtId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NvtId })
+        </td>
+    </tr>
+}
+
+</table>

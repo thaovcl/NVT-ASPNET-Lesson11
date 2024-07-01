@@ -1,0 +1,75 @@
+﻿@model NvtK22CNT1Lesson11.Models.NvtTaiKhoan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NvtLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NvtTaiKhoan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NvtId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
